@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link
+      rel="stylesheet"
+      href="./public/bootstrap-5.3.5-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid py-3">
+      <div class="card">
+        <div class="card-header">
+          CALCULADORA BASICA
+
+          <br /><br />
+          <div class="form-floating mb-3">
+            <input
+              type=""
+              class="form-control bg-info bg-opacity-25 text-dark"
+              id="txt_caja_resultado"
+              placeholder="Resultado"
+              disabled
+            />
+            <label for="txt_caja_resultado"></label>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table table-border border-primary">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="7"
+                      type="button"
+                    >
+                      7
+                    </button>
+                  </div>
+                </th>
+                <th scope="col">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="8"
+                      type="button"
+                    >
+                      8
+                    </button>
+                  </div>
+                </th>
+                <th scope="col">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="9"
+                      type="button"
+                    >
+                      9
+                    </button>
+                  </div>
+                </th>
+                <th scope="col">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn btn-secondary"
+                      onclick="capturar(this)"
+                      data-valor="/"
+                      type="button"
+                    >
+                      /
+                    </button>
+                  </div>
+                </th>
+                <th scope="col">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn btn-secondary"
+                      onclick="capturar(this)"
+                      data-valor="C"
+                      type="button"
+                    >
+                      C
+                    </button>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="4"
+                      type="button"
+                    >
+                      4
+                    </button>
+                  </div>
+                </th>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="5"
+                      type="button"
+                    >
+                      5
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="6"
+                      type="button"
+                    >
+                      6
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-secondary"
+                      onclick="capturar(this)"
+                      data-valor="x"
+                      type="button"
+                    >
+                      x
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn btn-secondary"
+                      onclick="capturar(this)"
+                      data-valor="CE"
+                      type="button"
+                    >
+                      CE
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="1"
+                      type="button"
+                    >
+                      1
+                    </button>
+                  </div>
+                </th>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="2"
+                      type="button"
+                    >
+                      2
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="3"
+                      type="button"
+                    >
+                      3
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn btn-secondary"
+                      onclick="capturar(this)"
+                      data-valor="-"
+                      type="button"
+                    >
+                      -
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn btn-secondary"
+                      onclick="capturar(this)"
+                      data-valor="Ans"
+                      type="button"
+                    >
+                      Ans
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="x"
+                      type="button"
+                    >
+                      .
+                    </button>
+                  </div>
+                </th>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-dark"
+                      onclick="capturar(this)"
+                      data-valor="0"
+                      type="button"
+                    >
+                      0
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn btn-secondary"
+                      onclick="capturar(this)"
+                      data-valor="="
+                      type="button"
+                    >
+                      =
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn btn-secondary"
+                      onclick="capturar(this)"
+                      data-valor="+"
+                      type="button"
+                    >
+                      +
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./public/bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+
+    <script src="./public/dist/js/calculadora.js"></script>
+  </body>
+</html>

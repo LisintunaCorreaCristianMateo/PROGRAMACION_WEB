@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Biografía | Cristian Mateo Lisintuña Correa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-custom {
+            background-color: var(--accent-color);
+            border-radius: 5px;
+            padding: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .navbar-custom a {
+            color: white;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-custom a:hover {
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            transform: translateY(-2px);
+        }
+        
+        section, article, aside, footer {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        h1, h2, h3 {
+            margin-top: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        p, ul, ol, figure {
+            margin-top: 1rem;
+        }
+        
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        img:hover {
+            transform: scale(1.02);
+        }
+        
+        figure {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        figcaption {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        audio, video {
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+        }
+        
+        footer a {
+            color: var(--light-color);
+        }
+        
+        address {
+            font-style: normal;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .icon-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .icon-list li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .icon-list i {
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            section, article, aside {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="text-center">
+    <div class="container">
+        <h1>Cristian Mateo Lisintuña Correa</h1>
+        <p class="lead mt-3">Desarrollador · Tecnólogo · Apasionado por el aprendizaje</p>
+        
+        <nav class="navbar-custom d-inline-block mt-4">
+            <a href="#perfil"><i class="bi bi-person-fill"></i> Perfil</a>
+            <a href="#gustos"><i class="bi bi-heart-fill"></i> Gustos</a>
+            <a href="#hobbies"><i class="bi bi-controller"></i> Hobbies</a>
+            <a href="#multimedia"><i class="bi bi-camera-fill"></i> Multimedia</a>
+            <a href="#contacto"><i class="bi bi-envelope-fill"></i> Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container mb-5">
+
+    <section id="perfil">
+        <h2><i class="bi bi-person-lines-fill"></i> Perfil</h2>
+        <article class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <figure>
+                    <img src="L00433466.jpeg" alt="Foto de perfil" class="profile-img">
+                    <figcaption>Mi foto de perfil</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Hola, soy Cristian Mateo Lisintuña Correa, un apasionado por la tecnología, la programación y el aprendizaje continuo.</p>
+                <p>Me gusta trabajar en proyectos innovadores, siempre buscando mejorar mis habilidades tanto técnicas como personales. Disfruto enfrentando nuevos desafíos que me permitan crecer profesionalmente y contribuir al desarrollo tecnológico.</p>
+                <p>Actualmente estoy enfocado en el desarrollo de software, con especial interés en inteligencia artificial y diseño de sistemas orientados a objetos.</p>
+            </div>
+        </article>
+    </section>
+
+    <section id="gustos">
+        <h2><i class="bi bi-stars"></i> Mis Gustos</h2>
+
+        <article>
+            <header><h3><i class="bi bi-music-note-beamed"></i> Gustos Musicales</h3></header>
+            <p>Disfruto de una variedad de géneros musicales que van desde el rock clásico hasta la música electrónica y baladas latinoamericanas. La música es una parte importante de mi vida diaria.</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="icon-list">
+                        <li><i class="bi bi-music-note"></i> Pop</li>
+                        <li><i class="bi bi-music-note"></i> Corridos</li>
+                        <li><i class="bi bi-music-note"></i> Bachatas</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <figure>
+                        <audio controls class="w-100">
+                            <source src="Audio de musica.mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <figcaption>Una de mis canciones favoritas</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </article>
+
+        <article class="mt-4">
+            <header><h3><i class="bi bi-activity"></i> Gustos Deportivos</h3></header>
+            <p>Me gustan los deportes que implican estrategia, trabajo en equipo y condición física. Creo firmemente en que el deporte no solo fortalece el cuerpo sino también la mente.</p>
+            
+            <ol class="icon-list">
+                <li><i class="bi bi-trophy-fill"></i> Fútbol</li>
+                <li><i class="bi bi-trophy-fill"></i> Ecuavoley</li>
+                <li><i class="bi bi-trophy-fill"></i> Atletismo</li>
+            </ol>
+        </article>
+    </section>
+
+    <section id="hobbies">
+        <h2><i class="bi bi-joystick"></i> Mis Hobbies</h2>
+        <article>
+            <p>Además de mi pasión por la tecnología, disfruto de diversas actividades que enriquecen mi tiempo libre y me ayudan a mantener un equilibrio en mi vida:</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="icon-list">
+                        <li><i class="bi bi-code-slash"></i> Programación de proyectos personales</li>
+                        <li><i class="bi bi-book"></i> Lectura de libros sobre ciencia y tecnología</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="icon-list">
+                        <li><i class="bi bi-controller"></i> Videojuegos de estrategia y aventura</li>
+                        <li><i class="bi bi-camera"></i> Senderismo y fotografía de paisajes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="alert alert-info mt-3">
+                <i class="bi bi-lightbulb"></i> Estos hobbies no solo me divierten, sino que también contribuyen a mi desarrollo creativo y profesional.
+            </div>
+        </article>
+    </section>
+
+    <section id="multimedia">
+        <h2><i class="bi bi-collection-play-fill"></i> Galería Multimedia</h2>
+        <article>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <figure>
+                        <img src="Captura de pantalla 2025-05-05 084418.png" alt="Proyecto 1" class="img-fluid">
+                        <figcaption>Proyecto personal de una tienda con base de datos orientado a objetos</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <figure>
+                        <video controls class="w-100">
+                            <source src="./public/video/video1.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        <figcaption>Video de una actividad que disfruto</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <aside class="bg-light">
+        <h2><i class="bi bi-lightbulb-fill"></i> Curiosidades sobre mí</h2>
+        <ul class="icon-list">
+            <li><i class="bi bi-robot"></i> Me apasiona la inteligencia artificial y sus aplicaciones prácticas</li>
+            <li><i class="bi bi-code-square"></i> He participado en varios hackatones universitarios con buenos resultados</li>
+            <li><i class="bi bi-joystick"></i> Estoy aprendiendo diseño de videojuegos como proyecto personal</li>
+            <li><i class="bi bi-globe"></i> Me encanta viajar y conocer nuevas culturas</li>
+            <li><i class="bi bi-cup-hot"></i> Soy un entusiasta del café de especialidad</li>
+        </ul>
+    </aside>
+
+</main>
+
+<footer id="contacto">
+    <div class="container">
+        <h2 class="text-white"><i class="bi bi-envelope-paper-heart"></i> Contacto</h2>
+        <address class="my-4">
+            <p><i class="bi bi-envelope"></i> Correo: <a href="mailto:cristianmateo@email.com">cristianmateo@email.com</a></p>
+            <p><i class="bi bi-phone"></i> Teléfono: +593 999 999 999</p>
+            <p><i class="bi bi-geo-alt"></i> Ciudad: Quito, Ecuador</p>
+        </address>
+        
+        <div class="social-links mb-3">
+            <a href="#" class="text-white mx-2"><i class="bi bi-github fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+        </div>
+        
+        <p class="mb-0">&copy; 2025 Cristian Mateo Lisintuña Correa. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
