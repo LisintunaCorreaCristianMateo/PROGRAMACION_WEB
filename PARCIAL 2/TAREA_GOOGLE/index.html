@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personlizar pagina</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .btn_personalizar {
+            position: fixed; /*He usado fixed para que el botón permanezca en la esquina inferior derecha de la pantalla, incluso cuando se hace scroll. */
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(7, 109, 109);
+            color: rgb(254, 254, 255);
+            padding: 10px 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            /* top,botomm, left,rigt*/
+            box-shadow: 0 1px 1px rgba(250, 250, 250, 0.959);
+            font-size: small;
+        }
+
+        .container {
+            position:relative;/* He usado relative para poder usar right, left y top para centrar el contenedor  */
+            top: 175px;
+            right: 200px;
+            left:600px;
+            width: 500px;
+            height:400px;
+            
+            background-color: rgb(0, 0, 0);
+            padding: 15px;
+            border-radius: 10px;
+           
+
+
+        }
+
+        .imagen {
+            position: absolute;
+            right: 6px;
+            top: 2px;
+        }
+        /* Una vez que he centrado el contenedor, he usado position absolute para la imagen y el input, para que se posicione en referencia al contenedor. */
+        .Texto {
+            position: absolute;
+            border-radius: 20px;
+            padding: 10px;
+            top:250px;
+            left:50px;
+            width: 470px;
+            
+
+        }
+
+    
+    </style>
+</head>
+
+<body>
+
+
+
+
+    
+    <div class="container">
+    <img class="imagen" src="./th.webp" alt="">
+            <input class="Texto" type="text" placeholder=" 🔍 Busca en Google o ingresa una URL                                                    🎙️ ">
+
+
+    </div>
+
+    <button class="btn_personalizar"> ✏️Personlizar Pagina</button>
+
+</body>
+
+</html>

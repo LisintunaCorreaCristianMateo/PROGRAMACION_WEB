@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada </title>
+    <style>
+        /* Variables globales */
+        :root {
+            --clr-primary: #103e14;
+            --clr-secondary: #000000;
+            --clr-terciario: #fbfbfb;
+            --spacing: 1.5rem;
+            --radius: 0.5rem;
+            --font-sans: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+  
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--clr-terciario);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--clr-terciario);
+        }
+
+        img {
+            width: 600px;
+            height: 250px;
+            display: block;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+             .btn {
+            display: inline-block;
+            background: var(--clr-terciario);
+            color: var(--clr-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        /* barra */
+        .barra {
+            display: flex;
+            justify-content: space-between;
+            color:var(--clr-terciario);
+            align-items: center;
+            padding: var(--spacing) 2rem;
+            background: var(--clr-secondary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .barra ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+
+        /* header Section */
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            padding: 4rem 2rem;
+            background-color: var(--clr-primary);
+            color:var(--clr-terciario);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+
+        .caracteristicas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            color: var(--clr-secondary);
+        }
+
+        .caracteristicas-item {
+            background:var(--clr-terciario);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 10px var(--clr-primary);
+            text-align: center;
+           
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+            color: var(--clr-primary);
+        }
+
+        .footer {
+            background: var(--clr-secondary);
+            color:var(--clr-terciario);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- barra -->
+    <nav class="barra">
+        <div class="logo">Mi Sitio</div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="header">
+        <div class="header-text">
+            <h1>Bienvenido a Nuestro Sitio</h1>
+            <p>La solución perfecta para gestionar tu negocio en línea con facilidad y estilo.</p>
+            <a href="#caracteristicas" class="btn">Descubre más</a>
+        </div>
+        <div class="img">
+            <img src="./logo.webp" alt="Ilustración de header">
+        </div>
+    </section>
+
+    <!-- caracteristicas -->
+    <section id="caracteristicas" class="caracteristicas">
+        <div class="caracteristicas-item">
+            <h3>Fácil de usar</h3>
+            <p>Interfaz intuitiva diseñada para usuarios de todos los niveles.</p>
+        </div>
+        <div class="caracteristicas-item">
+            <h3>Totalmente Personalizable</h3>
+            <p>Adapta colores, tipografías y diseños a tu marca.</p>
+        </div>
+        <div class="caracteristicas-item">
+            <h3>Soporte 24/7</h3>
+            <p>Nuestro equipo está siempre listo para ayudarte.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <p>&copy; 2025 MiSitio. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

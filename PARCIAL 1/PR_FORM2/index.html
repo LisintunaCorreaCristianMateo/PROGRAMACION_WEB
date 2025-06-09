@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+            <link
+      rel="stylesheet"
+      href="./public/bootstrap-5.3.5-dist/css/bootstrap.min.css"
+    />
+
+</head>
+<body>
+    <form action="server.html" method="get">
+        <label for="texto">Ingresa tu nombre</label>
+        <input type="text" id="texto" name="nombre" placeholder="Nombre"  value="David">
+        <br><br>
+        <label for="apellido">Ingrese su apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido"  value="Gonzalez">
+        <br><br>
+        <label for="fecha">Selecciona tu fecha de nacimiento</label>
+        <input type="date" id="fecha" name="fecha" placeholder="Fecha de nacimiento" value="2025-05-12" min="2025-05-10" max="2025-05-25"  >
+        <br><br>
+        <label for="tiempo">Hora</label>
+        <input type="time" id="tiempo" name="tiempo" placeholder="Hora de nacimiento" value="15:20">
+        <br><br>
+        <label for="color">Seleccione un color</label>
+        <input type="color" id="color" name="color" value="#ffffff">
+        <br><br>
+        <h2>Seleciones su canciones favoritas</h2>
+        <label for="musica1">Karol G-Tusa</label>
+        <input type="checkbox" id="musica1" name="cancionesFavoritas[]" value="Karol G-Tusa">
+
+        <label for="musica2">Feid-Luna</label>
+        <input type="checkbox" id="musica2" name="cancionesFavoritas[]" value="Feid-Luna" readonly checked >
+
+        <label for="musica3">Angel Guaraca-Carnabal</label>
+        <input type="checkbox" id="musica3" name="cancionesFavoritas[]" value="Angel Guaraca-Carnabal" checked>
+
+        <h2>Seleccione una edad</h2>
+        <label for="1">5-10</label>
+        <input type="radio" id="1" name="edad" value="5-10">
+        <label for="2">10-15</label>
+        <input type="radio" id="2" name="edad" value="10-15">
+        <label for="3">15-20</label>
+        <input type="radio" id="3" name="edad" value="15-20">
+        
+        <br><br>
+        <label for="estatura"></label>
+        <input type="number" id="estatura" name="estatura" placeholder="Estatura" value="1.70"  max="2.10" step="0.5" >
+
+        <br><br>
+        <label for="volumen">Subir el volumen</label>
+        <input type="range" id="volumen" name="volumen"  max="80" >
+
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script src="./public/bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="./server.html"></script>
+
+</body>
+</html>

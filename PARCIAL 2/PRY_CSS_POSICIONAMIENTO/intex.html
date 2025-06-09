@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Posicionamientos en CSS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 2000px; /* Para ver scroll */
+    }
+
+    .container {
+      position: relative;
+      height: 400px;
+      border: 2px solid black;
+      margin: 20px;
+      background: #f4f4f4;
+    }
+
+    .static-box {
+      position: static;
+      background: lightgray;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .relative-box {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background: lightgreen;
+      padding: 10px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      background: lightcoral;
+      padding: 10px;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: gold;
+      padding: 10px;
+      z-index: 999;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background: skyblue;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sticky-box">
+    🔵 Sticky: se pega al top al hacer scroll (como este texto).
+  </div>
+
+  <div class="container">
+    <div class="static-box">
+      ⚪ Static (por defecto): sigue el flujo normal del documento.
+    </div>
+
+
+    <div class="relative-box">
+      🟢 Relative: se mueve 20px desde su posición original, pero conserva su espacio.
+    </div>
+
+
+  </div>
+
+  <div class="fixed-box">
+    🟡 Fixed: siempre visible en la esquina inferior derecha, incluso al hacer scroll.
+  </div>
+
+  <div class="container">
+    <div class="absolute-box">
+      🔴 Absolute: se posiciona relativo al contenedor más cercano con `position: relative` (en este caso `.container`).
+    </div>
+
+
+  </div>
+          
+  <!-- Mucho texto para activar scroll y ver sticky y fixed -->
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portada </title>
+  <style>
+    /* Variables globales */
+    :root {
+      --clr-primary: #0a4011;
+      --clr-secondary: #242625;
+      --clr-dark: #333;
+      --clr-light: #f9f9f9;
+      --spacing: 1.5rem;
+      --radius: 0.5rem;
+      --font-sans: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--clr-dark);
+      background-color: var(--clr-light);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing) 2rem;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--clr-primary);
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .navbar ul li a {
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: background 0.3s;
+    }
+    .navbar ul li a:hover {
+      background: var(--clr-primary);
+      color: white;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 4rem 2rem;
+      /* background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); */
+      background-color:var(--clr-primary);
+      color: white;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: white;
+      color: var(--clr-primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-img img {
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+    .feature-item {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .feature-item:hover {
+      transform: translateY(-20px);
+    }
+    h3 {
+      margin-bottom: 1rem;
+      color: var(--clr-primary);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--clr-secondary);
+      color: #ddd;
+      text-align: center;
+      padding: 2rem;
+    }
+    .footer p {
+      font-size: 0.9rem;
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MiSitio</div>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#features">Características</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bienvenido a Nuestro Sitio</h1>
+      <p>La solución perfecta para gestionar tu negocio en línea con facilidad y estilo.</p>
+      <a href="#features" class="btn">Descubre más</a>
+    </div>
+    <div class="hero-img">
+      <img src="./logo.webp" alt="Ilustración de Hero">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="feature-item">
+      <h3>Fácil de usar</h3>
+      <p>Interfaz intuitiva diseñada para usuarios de todos los niveles.</p>
+    </div>
+    <div class="feature-item">
+      <h3>Totalmente Personalizable</h3>
+      <p>Adapta colores, tipografías y diseños a tu marca.</p>
+    </div>
+    <div class="feature-item">
+      <h3>Soporte 24/7</h3>
+      <p>Nuestro equipo está siempre listo para ayudarte.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <p>&copy; 2025 MiSitio. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

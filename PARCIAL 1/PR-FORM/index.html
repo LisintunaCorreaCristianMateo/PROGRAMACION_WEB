@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link
+      rel="stylesheet"
+      href="./public/bootstrap-5.3.5-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid my-5 ">
+      <form action="procesar_datos_form.html" method="get">
+        <!-- pos es mas seguro-->
+        <label for="caja_texto">Ingrese un texto para buscar</label>
+        <input
+          type="text"
+          id="caja_texto"
+          required
+          name="texto"
+          placeholder="Ingrese un texto para buscar"
+          value="animales"
+          disabled
+        />
+        <input type="submit" value="buscar" />
+      </form>
+      <form action="procesar_datos_form.html" method="post">
+        <!-- pos es mas seguro-->
+        <label for="caja_texto">Ingrese un texto para buscar</label>
+        <input
+          type="text"
+          id="caja_texto"
+          required
+          name="texto"
+          autofocus
+          autocomplete="caja_texto"
+          placeholder="Ingrese un texto para buscar"
+          maxlength="10"
+          minlength="1"
+        />
+        <br /><br />
+        <label for="password">Pasword</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          maxlength="6"
+          required
+        />
+        <br /><br />
+        <label for="email">Correo electronico</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="admin@gmail.com"
+        />
+        <br /><br />
+
+        <label for="copias_email">copias</label>
+        <input type="email" name="copias_email" id="copias_email" multiple />
+        <br /><br />
+        <label for="copias_email">cantidad</label>
+        <input type="email" name="cantidad" id="cantidad" min="5" max="8" />
+        <br /><br />
+        <label for="fecha">fecha</label>
+        <input type="date" name="copias_email" id="fecha" />
+        <br /><br />
+        <label for="tiempo">Tiempo</label>
+        <br /><br />
+        <input type="time" name="tiempo" id="tiempo" />
+        <br /><br />
+
+        <label for="fecha_hora">Fecha y hora</label>
+        <input type="datetime-local" name="fecha_hora" id="fecha_hora" />
+        <br /><br />
+
+        <label for="rango">Volumen</label>
+        <input
+          type="range"
+          name="rango"
+          id="rango"
+          value="10"
+          min="0"
+          max="100"
+          step="30"
+        />
+        <br /><br />
+
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color" value="#FFFFFF" />
+        <br /><br />
+
+        <label for="musica_1">Musica1</label>
+        <input type="checkbox" name="musica[]" id="musica_1" required />
+
+        <label for="musica_2">Musica2</label>
+        <input type="checkbox" name="musica[]" id="musica_2" readonly />
+
+        <label for="musica_3">Musica3</label>
+        <input type="checkbox" name="musica[]" id="musica_3" disabled />
+
+        <label for="musica_4">Musica4</label>
+        <input type="checkbox" name="musica[]" id="musica_4" autofocus />
+        <br /><br />
+
+        <h1>Cual es tu s.o que usas</h1>
+        <br /><br /><br />
+        <label for="windows">Windows</label>
+        <input
+          type="radio"
+          name="sistema_operativo"
+          id="windows"
+          value="windows"
+        />
+
+        <label for="linux">Linux</label>
+        <input type="radio" name="sistema_operativo" id="linux" value="linux" />
+
+        <label for="mac">Mac</label>
+        <input type="radio" name="sistema_operativo" id="mac" value="mac" />
+
+        <label for="archivo">Archivo</label>
+        <input
+          type="file"
+          name="archivo"
+          id="archivo"
+          value="archivo"
+          accept="png"
+        />
+        <br /><br /><br />
+        <input type="submit" value="buscar" />
+      </form>
+    </div>
+
+    <script src="./public/bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

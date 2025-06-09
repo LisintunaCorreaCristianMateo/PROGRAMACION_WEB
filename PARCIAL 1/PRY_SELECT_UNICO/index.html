@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECT UNICO</title>
+    <link rel="stylesheet" href="./public/bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <br><br>
+    <div class="container py-5 " >
+        <h1>Introduccion al Select</h1>
+
+        <form action="server.html" method="get">
+
+        <!-- 
+        <label for="lenguaje">Selecciones un lenguaje de programacion</label>
+        <select name="lenguaje_programacion" id="lenguaje">
+        <option value="javascript">Javascript</option>
+        <option value="java">Java</option>
+        <option value="python" selected>Python</option>
+        <option value="c++" disabled>c++</option>
+        </select>
+        <button type="submit">Enviar</button>
+        -->
+
+        <!--
+        <label for="lenguaje_favorito">Selecciona tu lenguaje de programacion</label>
+        <select name="lenguaje_favorito" id="lenguaje_favorito" required>
+            <option value="" disabled selected > </option>
+            <option value="javascript">Javascript</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+        </select>
+        <br><br>
+        
+        -->
+        <!--
+        <label for="vehiculos">Selecione su auto favorito</label>
+        <select name="vehiculos" id="vehiculos">
+        <option value="" disabled selected>Seleccione una opcion</option>
+         <optgroup label="Ferrari"></optgroup>
+            <option value="v1">Version 1</option>
+            <option value="v2">Version 2</option>
+            <option value="v3">Version 3</option>
+         <optgroup label="Toyot"></optgroup>
+                <option value="v1">Version 1</option>
+                <option value="v2">Version 2</option>
+                <option value="v3">Version 3</option>
+         <optgroup label="Mazda"></optgroup>
+                <option value="v1">Version 1</option>
+                <option value="v2">Version 2</option>
+                <option value="v3">Version 3</option>
+        </select>
+        <button type="submit" >Enviar</button>
+        -->
+        <label for="lenguajes_favoritos">Selecciona uno o varios lenguajes</label>
+        <select name="lenguajes[]" id="lenguajes_favoritos" class="form-select" multiple>
+            <option value="" disabled selected>selecciona</option>
+            <option value="javascript">Javascript</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="c++">C++</option>
+            
+
+        </select>
+        <button type="submit" >Enviar</button>
+
+
+
+       </form>
+     <script src="./public/bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+     
+    </div>
+</body>
+</html>

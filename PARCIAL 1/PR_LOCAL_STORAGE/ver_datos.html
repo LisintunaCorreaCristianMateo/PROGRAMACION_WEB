@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VER NOMBRE DE USUARIO</title>
+   <link
+      rel="stylesheet"
+      href="./public/bootstrap-5.3.5-dist/css/bootstrap.min.css"
+    />      
+</head>
+<body>
+    <div class="container-py5">
+        <h1>DATOS DE USUARIO</h1>
+
+        <table class="table table-striped">
+            <tr>
+                <td>NOMBRE
+
+                </td>
+            <td> APELLIDO
+
+            </td>
+            <td>
+                EMAIL
+            </td>
+            <td></td>
+            </tr>
+             <td id="table_nombre">
+
+             </td>
+             <td id="table_apellido">
+
+             </td>
+             <td id="table_email">
+
+             </td>
+             <td>
+                <button class="btn btn-danger" onclick="eliminar()">Eliminar</button>
+             </td>
+            </tr>
+        </table>
+
+    </div>
+
+     <script>
+        var datos_us= localStorage.getItem("datos");
+        var usuario= JSON.parse(datos_us);
+        console.log(usuario);
+        document.getElementById('table_nombre').innerHTML = usuario.nombre;
+        document.getElementById('table_apellido').innerHTML = usuario.apellido;
+        document.getElementById('table_email').innerHTML = usuario.email;
+
+
+   
+
+    </script>
+    <script src="./public/js/eliminar.js"></script>
+
+</body>
+</html>

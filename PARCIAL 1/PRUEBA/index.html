@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad</title>
+</head>
+<body>
+    <label for="pasword">Contraseña</label>
+    <input type="password" id="pasword" placeholder="Contraseña" min="8" max="12" required>
+<br><br>
+
+<p>Ingrese la fecha de nacimiento</p>
+    <label for="fecha">fecha</label>
+    <input type="date" id="fecha" placeholder="Fecha de nacimiento" min="2000-01-01" max="2025-05-14" required>
+<br><br><br>
+
+    <label for="genero">Sexo</label>
+    <input type="radio" name="genero[]"id="genero" value="Masculino"> Masculino
+    <input type="radio" name="genero[]"id="genero" value="Femenino"> Femenino
+    <input type="radio" name="genero[]"id="genero" value="Otro"> Prefiero no decir
+
+    <br><br>
+<label for="foto"></label>
+<input type="file" id="foto" placeholder="Sube una foto" required="pngmp4" accept="image/png, image/jpeg, image/jpg">
+<br><br><br>
+<label for="terminos"></label>
+<input type="checkbox" id="terminos" required> Acepto los terminos y condiciones
+    <button id="btn">Enviar</button>
+</body>
+</html>
