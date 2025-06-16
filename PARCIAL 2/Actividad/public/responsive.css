@@ -1,0 +1,45 @@
+header,footer{
+    background-color: black;
+    color:white;
+    padding:1rem;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contenido1{
+    background-color: rgb(115, 99, 130);
+}
+.contenido2{
+    background-color: rgb(138, 110, 75);
+}
+
+main{
+display: flex;
+flex-direction: column;
+
+}
+.columna{
+    padding:1.5rem;
+    padding:1.5rem;
+    border:2px;
+    box-sizing:border-box;
+    border-width: 2px;
+}
+
+
+/*configurar mida para destop*/
+@media(min-width:520px){
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    main{
+        flex-direction: row;
+    }
+    .columnas{
+        width: 50%;
+    }
+    .contenido1{
+        background-color: yellow;
+    }
+}
+
+

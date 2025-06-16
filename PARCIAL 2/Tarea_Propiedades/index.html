@@ -1,0 +1,312 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demostración de Propiedades CSS Responsivas</title>
+  <link rel="stylesheet" href="styles.css">
+
+<style> .container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+.inline-container { display: inline-flex; gap: 8px; }
+.baseline-text { vertical-align: baseline; }
+.prop-background-color { background-color: #222; color: #fff; padding: 8px; }
+.prop-color { color: #333; font-size: 16px; }
+.prop-font-size { font-size: 18px; }
+.prop-font-family { font-family: 'Arial', sans-serif; font-size: 16px; }
+.prop-font-weight { font-weight: 600; }
+.prop-font-style { font-style: normal; }
+.prop-line-height { line-height: 1.6; font-size: 16px; }
+.prop-letter-spacing { letter-spacing: 0.5px; }
+.prop-word-spacing { word-spacing: 2px; }
+.prop-text-align { text-align: left; border: 1px solid #ccc; padding: 8px; }
+.prop-text-decoration { text-decoration: none; color: blue; }
+.prop-text-transform { text-transform: none; }
+.prop-text-shadow { text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+.prop-white-space { white-space: normal; width: 200px; border: 1px solid #ccc; }
+.prop-vertical-align { vertical-align: middle; border: 1px solid #ccc; }
+.prop-visibility { visibility: visible; border: 1px solid #ccc; padding: 8px; }
+.prop-opacity { opacity: 1; background: #f0f0f0; padding: 8px; }
+.prop-overflow { overflow: auto; max-height: 40px; border:1px solid #ccc; }
+.prop-overflow-x { overflow-x: scroll; white-space: nowrap; border:1px solid #ccc; }
+.fixed-height { height: 60px; border:1px solid #ccc; overflow-y: scroll; }
+.prop-overflow-y { overflow-y: scroll; height: 60px; border:1px solid #ccc; }
+.prop-position-container { position: relative; height: 100px; border:1px solid #ccc; }
+.prop-positioned { position: absolute; top: 50px; right: 30px; bottom: auto; left: auto; z-index: 10; background: #ddd; padding:4px; }
+.prop-display-parent { display: flex; }
+.prop-display-child { display: flex; background: #eee; padding:8px; }
+.prop-flex-box { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; gap: 8px; border:1px solid #ccc; padding:8px; }
+.prop-flex-item { flex-grow: 1; flex-shrink: 1; flex-basis: 200px; order: 0; background: #fafafa; padding:8px; border:1px solid #ddd; }
+.prop-grid-box { display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: auto; gap: 20px; align-items: center; justify-items: center; border:1px solid #ccc; padding:8px; }
+.prop-grid-item { background: #f9f9f9; padding:8px; border:1px solid #ddd; grid-column: auto; grid-row: auto; }
+.prop-box-model { margin:20px; padding:20px; width:800px; height:200px; background:#f5f5f5; border:1px solid #ccc; }
+.prop-box-sizing { box-sizing: border-box; padding:20px; border:2px solid #444; }
+.prop-border { border: 2px solid #444; border-radius: 12px; border-top:3px solid #555; border-right:3px solid #555; border-bottom:3px solid #555; border-left:3px solid #555; padding:8px; }
+.prop-box-shadow { box-shadow: 0 4px 8px rgba(0,0,0,0.3); padding:8px; background:#fff; }
+.prop-background-image { background-image: url('https://via.placeholder.com/200x50'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; padding:50px; color:#fff; }
+.prop-cursor { cursor: pointer; }
+.prop-pointer-events { pointer-events: auto; background:#eee; padding:8px; }
+.prop-user-select { user-select: text; border:1px solid #ccc; padding:4px; }
+.prop-content::before { content: "Texto grande"; display:block; padding:8px; background:#ddd; }
+.prop-list-style { list-style-type: disc; list-style-position: outside; list-style-image: none; padding-left:20px; }
+.prop-outline { outline: 2px solid #f00; padding:8px; }
+.prop-filter { filter: brightness(1); }
+.prop-transform { transform: scale(1); transform-origin: center center; transition: transform 0.3s ease; display:inline-block; padding:8px; background:#eee; }
+.prop-transform:hover { transform: scale(1.1); }
+.prop-transform-3d { transform-style: flat; perspective: 1000px; backface-visibility: visible; padding:8px; background:#efefef; }
+.prop-transition { transition: all 0.3s ease; background:#ccc; padding:8px; }
+.prop-transition:hover { background:#aaa; }
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+.prop-animation { animation-name: girar; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: linear; animation-delay: 0s; animation-direction: normal; animation-fill-mode: forwards; display:inline-block; padding:8px; background:#ddd; }
+.prop-hyphens { hyphens: auto; width:200px; }
+.prop-word-break { word-break: normal; width:200px; border:1px solid #ccc; }
+.prop-clip-path { clip-path: circle(50%); width:100px; height:100px; }
+.object-fit-container { width:150px; height:100px; overflow:hidden; }
+.prop-object-fit { object-fit: cover; object-position: center center; width:100%; height:100%; }
+.prop-resize { resize: both; width:150px; height:60px; }
+.prop-scroll-container { display:flex; overflow-x: scroll; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #888 #ddd; }
+.prop-scroll-item { flex:0 0 auto; scroll-snap-align: center; padding:16px; background:#eee; margin-right:8px; }
+.prop-backdrop-filter-container { position: relative; display:inline-block; }
+.prop-backdrop-filter-overlay { position:absolute; top:0; left:0; width:100%; height:100%; backdrop-filter: blur(10px); color:#fff; display:flex; align-items:center; justify-content:center; }
+.prop-custom-property { color: var(--main-color); padding:8px; }
+.prop-accent-color { accent-color: #0066cc; }
+.prop-image-rendering { image-rendering: auto; }
+.prop-overscroll-container { overscroll-behavior: auto; max-height:100px; overflow:auto; border:1px solid #ccc; padding:8px; }
+.prop-scrollbar-demo { max-height: 60px; overflow-y: scroll; scrollbar-width: thin; scrollbar-color: #888 #ddd; border:1px solid #ccc; padding:4px; }
+.prop-text-decoration-color { text-decoration: underline; text-decoration-color: #0066cc; text-decoration-style: solid; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.prop-text-emphasis { text-emphasis: filled dot #f00; text-emphasis-color: #f00; text-emphasis-style: circle; text-emphasis-position: under; }
+.prop-font-variant { font-variant: normal; }
+.prop-font-feature-settings { font-feature-settings: "liga" on; }
+.prop-font-kerning { font-kerning: normal; }
+/* Media Query para pantallas ≤600px */
+@media (max-width: 600px) {
+  .prop-background-color { background-color: #333; }
+  .prop-color { color: #ddd; }
+  .prop-font-size { font-size: 16px; }
+  .prop-font-family { font-family: 'Helvetica', sans-serif; }
+  .prop-font-weight { font-weight: 500; }
+  .prop-font-style { font-style: italic; }
+  .prop-line-height { line-height: 1.4; }
+  .prop-letter-spacing { letter-spacing: 0.2px; }
+  .prop-word-spacing { word-spacing: 1px; }
+  .prop-text-align { text-align: center; }
+  .prop-text-decoration { text-decoration: underline; }
+  .prop-text-transform { text-transform: uppercase; }
+  .prop-text-shadow { text-shadow: none; }
+  .prop-white-space { white-space: nowrap; }
+  .prop-vertical-align { vertical-align: baseline; }
+  .prop-visibility { visibility: hidden; }
+  .prop-opacity { opacity: 0.8; }
+  .prop-overflow { overflow: hidden; }
+  .prop-overflow-x { overflow-x: auto; }
+  .prop-overflow-y { overflow-y: auto; }
+  .prop-positioned { top: 20px; right: 10px; }
+  .prop-display-child { display: block; }
+  .prop-flex-box { flex-direction: column; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 4px; }
+  .prop-flex-item { flex-grow: 0; flex-shrink: 2; flex-basis: 100%; order: 1; }
+  .prop-grid-box { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 10px; }
+  .prop-box-model { margin: 10px; padding: 10px; width: 100%; height: auto; }
+  .prop-box-sizing { box-sizing: content-box; }
+  .prop-border { border-width: 1px; border-radius: 6px; border-top:1px solid #777; border-right:1px solid #777; border-bottom:1px solid #777; border-left:1px solid #777; }
+  .prop-box-shadow { box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+  .prop-background-image { background-size: contain; background-position: top center; background-repeat: repeat; background-attachment: scroll; }
+  .prop-cursor { cursor: default; }
+  .prop-pointer-events { pointer-events: none; }
+  .prop-user-select { user-select: none; }
+  .prop-content::before { content: "Texto móvil"; }
+  .prop-list-style { list-style-type: circle; list-style-position: inside; }
+  .prop-outline { outline: 1px dashed #f66; }
+  .prop-filter { filter: brightness(0.8); }
+  .prop-transform { transform: scale(0.9); transform-origin: top left; }
+  .prop-transform-3d { transform-style: preserve-3d; perspective: 500px; backface-visibility: hidden; }
+  .prop-transition { transition-duration: 0.2s; }
+  .prop-animation { animation-duration: 1s; animation-iteration-count: 3; animation-timing-function: linear; animation-delay: 0.2s; animation-direction: reverse; }
+  .prop-hyphens { hyphens: manual; }
+  .prop-word-break { word-break: break-all; }
+  .prop-clip-path { clip-path: inset(0 0 0 0); }
+  .prop-object-fit { object-fit: contain; object-position: top left; }
+  .prop-resize { resize: vertical; }
+  .prop-scroll-container { scroll-snap-type: none; }
+  .prop-scroll-item { scroll-snap-align: start; }
+  .prop-backdrop-filter-overlay { backdrop-filter: none; }
+  :root { --main-color: #2980b9; }
+  .prop-accent-color { accent-color: #004499; }
+  .prop-image-rendering { image-rendering: crisp-edges; }
+  .prop-overscroll-container { overscroll-behavior: contain; }
+  .prop-scrollbar-demo { scrollbar-width: none; }
+  .prop-text-decoration-color { text-decoration-color: #004499; text-decoration-style: wavy; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .prop-text-emphasis { text-emphasis-color: #c00; text-emphasis-style: open circle; text-emphasis-position: over; }
+  .prop-font-variant { font-variant: small-caps; }
+  .prop-font-feature-settings { font-feature-settings: "liga" off; }
+  .prop-font-kerning { font-kerning: none; }
+}
+</style>
+
+
+
+</head>
+<body>
+  <h1>Demostración de Propiedades CSS (Responsive a 600px)</h1>
+  <!-- Contenedores para cada propiedad -->
+  <div class="container">
+    <!-- Cada propiedad se representa con un elemento y texto explicativo -->
+    <!-- 1. background-color -->
+    <div class="prop-background-color">background-color</div>
+    <!-- 2. color -->
+    <div class="prop-color">color</div>
+    <!-- 3. font-size -->
+    <div class="prop-font-size">font-size</div>
+    <!-- 4. font-family -->
+    <div class="prop-font-family">font-family</div>
+    <!-- 5. font-weight -->
+    <div class="prop-font-weight">font-weight</div>
+    <!-- 6. font-style -->
+    <div class="prop-font-style">font-style</div>
+    <!-- 7. line-height -->
+    <div class="prop-line-height">line-height</div>
+    <!-- 8. letter-spacing -->
+    <div class="prop-letter-spacing">letter-spacing</div>
+    <!-- 9. word-spacing -->
+    <div class="prop-word-spacing">word-spacing</div>
+    <!-- 10. text-align -->
+    <div class="prop-text-align">text-align</div>
+    <!-- 11. text-decoration -->
+    <div class="prop-text-decoration">text-decoration</div>
+    <!-- 12. text-transform -->
+    <div class="prop-text-transform">text-transform</div>
+    <!-- 13. text-shadow -->
+    <div class="prop-text-shadow">text-shadow</div>
+    <!-- 14. white-space -->
+    <div class="prop-white-space">white-space (texto largo sin espacios para ver el efecto)</div>
+    <!-- 15. vertical-align -->
+    <div class="inline-container">
+      <span class="prop-vertical-align">vertical-align (inline)</span>
+      <span class="baseline-text">(baseline comparison)</span>
+    </div>
+    <!-- 16. visibility -->
+    <div class="prop-visibility">visibility</div>
+    <!-- 17. opacity -->
+    <div class="prop-opacity">opacity</div>
+    <!-- 18. overflow -->
+    <div class="prop-overflow">Overflow: contenido muy largo que probablemente desborde: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae.</div>
+    <!-- 19. overflow-x -->
+    <div class="prop-overflow-x">Overflow-x: contenido ancho que desborda horizontalmente: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <!-- 20. overflow-y -->
+    <div class="fixed-height prop-overflow-y">Overflow-y: <br>línea1<br>línea2<br>línea3<br>línea4<br>línea5<br>línea6<br>línea7</div>
+    <!-- 21. position/top/right/bottom/left/z-index -->
+    <div class="prop-position-container">
+      <div class="prop-positioned">position/top/right/bottom/left/z-index</div>
+    </div>
+    <!-- 27. display -->
+    <div class="prop-display-parent">
+      <div class="prop-display-child">display flex/block</div>
+    </div>
+    <!-- 28-37 Flex items examples -->
+    <div class="flex-box prop-flex-box">
+      <div class="prop-flex-item item1">item1</div>
+      <div class="prop-flex-item item2">item2</div>
+      <div class="prop-flex-item item3">item3</div>
+    </div>
+    <!-- 38-49 Grid examples -->
+    <div class="grid-box prop-grid-box">
+      <div class="prop-grid-item">G1</div>
+      <div class="prop-grid-item">G2</div>
+      <div class="prop-grid-item">G3</div>
+    </div>
+    <!-- 50-65 Box model examples: margin, padding, width/height -->
+    <div class="prop-box-model">box-model (margin/padding/width/height)</div>
+    <!-- 66. box-sizing -->
+    <div class="prop-box-sizing">box-sizing</div>
+    <!-- 67-79 Borders -->
+    <div class="prop-border">border</div>
+    <!-- 80. box-shadow -->
+    <div class="prop-box-shadow">box-shadow</div>
+    <!-- 81-88 Background advanced -->
+    <div class="prop-background-image">background-image</div>
+    <!-- 89-91 Cursor/pointer/user-select -->
+    <button class="prop-cursor">cursor</button>
+    <div class="prop-pointer-events">pointer-events (intenta clickar)</div>
+    <input class="prop-user-select" value="user-select (intenta seleccionar)" readonly>
+    <!-- 92. content pseudo-element -->
+    <div class="prop-content"></div>
+    <!-- 93-95 List styles -->
+    <ul class="prop-list-style">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+    </ul>
+    <!-- 96-99 Outline -->
+    <div class="prop-outline">outline</div>
+    <!-- 100. filter -->
+    <img src="https://via.placeholder.com/100" alt="filter" class="prop-filter">
+    <!-- 101-106 Transform/3D -->
+    <div class="prop-transform">transform</div>
+    <div class="prop-transform-3d">3D element</div>
+    <!-- 107-119 Transitions/Animations -->
+    <div class="prop-transition">Hover para ver transición</div>
+    <div class="prop-animation">Animación</div>
+    <!-- 121-127 Text/overflow multicol -->
+    <p class="prop-hyphens">Texto largo para probar hyphens en un párrafo largo que podría necesitar guiones automáticos en diferentes anchos de pantalla.</p>
+    <p class="prop-word-break">TextoLargoSinEspaciosQueRompeParaVerWordBreakEfectoEnPantallasPequeñas.</p>
+    <!-- 125 clip-path aplicada a imagen -->
+    <img src="https://via.placeholder.com/100" alt="clip-path" class="prop-clip-path">
+    <!-- 126 object-fit/position -->
+    <div class="object-fit-container"><img src="https://via.placeholder.com/150x100" alt="object-fit" class="prop-object-fit"></div>
+    <!-- 128 resize -->
+    <textarea class="prop-resize">Textarea redimensionable</textarea>
+    <!-- 129-131 scroll-behavior/snap -->
+    <div class="scroll-container prop-scroll-container">
+      <div class="item-scroll prop-scroll-item">S1</div>
+      <div class="item-scroll prop-scroll-item">S2</div>
+      <div class="item-scroll prop-scroll-item">S3</div>
+    </div>
+    <!-- 136 backdrop-filter overlay -->
+    <div class="prop-backdrop-filter-container">
+      <img src="https://via.placeholder.com/300x100" alt="fondo">
+      <div class="prop-backdrop-filter-overlay">Overlay con backdrop-filter</div>
+    </div>
+    <!-- 137 custom property (background color) -->
+    <div class="prop-custom-property">Custom property</div>
+    <!-- 171 accent-color -->
+    <label><input type="checkbox" class="prop-accent-color"> Accent-color</label>
+    <!-- 173 text-size-adjust se aplica en <html> en CSS -->
+    <!-- 175 image-rendering -->
+    <img src="https://via.placeholder.com/100" alt="image-rendering" class="prop-image-rendering">
+    <!-- 176 overscroll-behavior container -->
+    <div class="overscroll-container prop-overscroll-container">
+      Contenedor con overscroll-behavior. Prueba scroll si el contenido es grande.
+      <div style="height:200px; background:#eee;">Contenido extra</div>
+    </div>
+    <!-- 179-181 Scrollbar (solo en Firefox, puede no verse en todos los navegadores) -->
+    <div class="scrollbar-demo prop-scrollbar-demo">
+      Contenido con scrollbar personalizado si el navegador lo soporta. <br>Multiples líneas para scroll.<br>...</div>
+    <!-- 192-195 Text decoration advanced -->
+    <a href="#" class="prop-text-decoration-color">Texto con decoración</a>
+    <!-- 196-198 text-emphasis (poco soporte) -->
+    <p class="prop-text-emphasis">Texto con énfasis</p>
+    <!-- 199-200 font-variant, font-feature-settings -->
+    <p class="prop-font-variant">font-variant</p>
+    <p class="prop-font-feature-settings">font-feature-settings</p>
+    <!-- 201 font-kerning -->
+    <p class="prop-font-kerning">font-kerning</p>
+  </div>
+</body>
+</html>
+
+/* styles.css */
+/* Base general para el contenedor */

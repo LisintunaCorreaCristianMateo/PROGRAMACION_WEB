@@ -1,0 +1,47 @@
+header,footer{
+    background-color: violet;
+    color:blue;
+    text-align:center;
+    font-weight: bold;
+    padding:10px;
+}
+.contenido1{
+    background-color: brown;
+
+}
+.contenido2{
+    background-color: rgb(55, 113, 70);
+}
+
+/*configurar main*/
+
+main{
+    display:flex;
+    flex-direction: column;
+}
+
+.columnas{
+    padding:1.5rem;
+    border:2px;
+    box-sizing:border-box;
+    border-width: 2px;
+}
+/*configurar mida para destop*/
+@media(max-width:520px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    main{
+        flex-direction: row;
+    }
+    .columnas{
+        width: 50%;
+    }
+    .contenido1{
+        background-color: yellow;
+    }
+}
+footer{
+    position:relative;
+    top:550px;
+}

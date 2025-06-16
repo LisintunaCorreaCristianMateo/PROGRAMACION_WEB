@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRUPO 2</title>
+    <style>
+        :root{
+            --color-background: #ffffff;
+            --color-text: #000000;
+            --boton-flex-direction:row;
+            --color-card:red;
+            --color-primary: green;
+        }
+        header {
+            background-color: var(--color-primary);
+            justify-content: space-between;
+        }
+        .reproductor {
+            max-width: 400px;
+            margin: 2rem auto;
+            color: var(--color-text);
+            text-align: center;
+            background-color: var(--color-background);
+        }
+        .modo-oscuro {
+            --color-text: #ffffff;
+            --color-background: #000000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi reproductor</h1>
+        <button onclick="document.body.classList.toggle('modo-oscuro')">modo oscuro</button>    
+        <button>cambiar iconos</button>
+    </header>
+    <main class="reproductor">
+        <figure>
+            <img src="#" alt="">
+        </figure>
+        <h2>Cancion de ejemplo</h2>
+        <p>artista desconocido</p>
+        <p>⏯▶</p>
+    </main>
+</body>
+</html>

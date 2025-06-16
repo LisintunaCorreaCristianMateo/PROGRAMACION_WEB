@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variables CSS Dinámicas</title>
+  <style>
+    :root {
+      --color-principal: #3498db;
+      --color-secundario: #ffffff;
+      --tamaño-fuente: 16px;
+      --espaciado: 16px;
+    }
+
+    body {
+      
+      font-family: Arial, sans-serif;
+      font-size: var(--tamaño-fuente);
+    }
+
+    header {
+      background: var(--color-principal);
+      color: var(--color-secundario);
+      padding: var(--espaciado);
+      border-radius: 0.5rem;
+      text-align: center;
+    }
+
+    .card {
+      padding: var(--espaciado);
+      margin-bottom: var(--espaciado);
+      border: 2px solid var(--color-principal);
+      border-radius: 0.5rem;
+    }
+
+    .btn {
+      background: var(--color-principal);
+      color: var(--color-secundario);
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.25rem;
+    }
+
+    footer {
+      background-color: var(--color-principal);
+      color: var(--color-secundario);
+      padding: var(--espaciado);
+      position: relative;
+      top: 300px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Demo de Variables CSS</h1>
+  </header>
+  <br><br>
+  <main>
+    <div class="controls">
+      <label for="inputColor">Color principal:</label>
+      <input type="color" id="inputColor" value="#3498db">
+      <label for="inputSize">Tamaño fuente:</label>
+      <input type="range" id="inputSize" min="12" max="24" value="16">
+      <button class="btn" onclick="resetDefaults()">Restablecer</button>
+    </div>
+    <br>
+    <div class="card">
+      <h2>Tarjeta de ejemplo</h2>
+      <p>El contenido de esta tarjeta utiliza las variables CSS para mantener coherencia en colores, tipografía y
+        espaciado.</p>
+    </div>
+
+    <div class="card">
+      <h2>Otra tarjeta</h2>
+      <p>Puedes cambiar el color principal y el tamaño de fuente usando los controles de arriba.</p>
+    </div>
+  </main>
+  <footer >
+    <p>Derechos de autor del grupo 4</p>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const inputColor = document.getElementById('inputColor');
+    const inputSize = document.getElementById('inputSize');
+
+    // Cambiar color principal al seleccionar un nuevo valor
+    inputColor.addEventListener('input', e => {
+      root.style.setProperty('--color-principal', e.target.value);
+    });
+
+    // Cambiar tamaño de fuente en tiempo real
+    inputSize.addEventListener('input', e => {
+      root.style.setProperty('--tamaño-fuente', e.target.value + 'px');
+    });
+
+    // Función para restablecer los valores por defecto
+    function resetDefaults() {
+      inputColor.value = '#3498db';
+      inputSize.value = '16';
+      root.style.setProperty('--color-principal', '#3498db');
+      root.style.setProperty('--tamaño-fuente', '16px');
+    }
+  </script>
+</body>
+
+</html>
