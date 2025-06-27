@@ -17,4 +17,4 @@ function cargarPaginas(url_pagina){
         document.getElementById('main').innerHTML = contenidoModificado;
     })
 }
-window.onload=() => cargarPaginas('perfil')
+window.onload=() => cargarPaginas('perfil')//ruta por defecto

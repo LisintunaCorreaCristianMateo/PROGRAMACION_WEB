@@ -6,6 +6,7 @@
     <title>Elementos de Formulario HTML con Eventos</title>
     <link rel="stylesheet" href="./css/estilos.css" />
   </head>
+
   <body>
     <div class="container">
       <h1 class="colorTitulo">Elementos de Formulario HTML con Eventos</h1>
@@ -15,7 +16,7 @@
         <div class="two-column">
           <div class="form-group">
             <label for="textInput">Input Text:</label>
-            <br />
+
             <input
               type="text"
               id="textInput"
@@ -111,11 +112,11 @@
           <div class="form-group">
             <label for="timeInput">Input Time:</label>
             <!--usar: onchange, onblur-->
-            <input type="time" 
-            id="timeInput" 
-            onchange="time(this)"
-            onblur="time(this)"
-
+            <input
+              type="time"
+              id="timeInput"
+              onchange="time(this)"
+              onblur="time(this)"
             />
 
             <div class="response-area">
@@ -131,37 +132,92 @@
         <div class="two-column">
           <div class="form-group">
             <label for="fileInput">Input File:</label>
+            <!--usar:onchange, onclick, onblur-->
             <input
               type="file"
               id="fileInput"
               accept="image/*,.pdf,.doc,.docx"
+              onchange="file(this)"
+              onclick="file(this)"
+              onblur="file(this)"
             />
+            <div class="response-area">
+              <div class="response-title"></div>
+              <div class="response-content" id="fileResponse"></div>
+            </div>
           </div>
           <div class="form-group">
             <label for="rangeInput">Input Range:</label>
-            <input type="range" id="rangeInput" min="0" max="100" value="50" />
-            <span id="rangeValue">50</span>
+            <!--usa:oninput, onchange -->
+            <input
+              type="range"
+              id="rangeInput"
+              min="0"
+              max="100"
+              value="50"
+              oninput="range(this)"
+              onchange="range(this)"
+            />
+            <div class="response-area">
+              <div class="response-title"></div>
+              <div class="response-content" id="respuestaRange">
+                <span id="rangeValue">50</span>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div class="form-section">
         <div class="two-column">
           <div class="form-group">
             <label for="colorInput">Input Color:</label>
-            <input type="color" id="colorInput" value="#667eea" />
+            <!--Hacer el input invisible-->
+            <input
+              type="color"
+              id="colorInput"
+              value="#667eea"
+              onchange="cambiarColor(this)"
+              oninput="cambiarColor(this)"
+            />
+
+            <div class="response-area" id="colorResponse">
+              <div class="response-title"></div>
+              <div class="response-content" id="colorRespuesta"></div>
+            </div>
           </div>
           <div class="form-group">
             <label for="telInput">Input Tel:</label>
-            <input type="tel" id="telInput" placeholder="+1-234-567-8900" />
+            <!--Usa:oninput, onkeyup-->
+            <input type="tel" id="telInput"
+             placeholder="+1-234-567-8900"
+             oninput="telefono(this)"
+             onkeyup="telefono(this)"
+             
+             />
+
+            <div class="response-area">
+              <div class="response-title"></div>
+              <div class="response-content" id="respuestaTel"></div>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div class="form-group">
         <div class="form-group">
           <label for="urlInput">Input URL:</label>
-          <input type="url" id="urlInput" placeholder="https://ejemplo.com" />
-        </div>
-        <div class="response-area">
-          <div class="response-title"></div>
-          <div class="response-content" id="specialResponse">
-           
-          </div>
+          <!--usar:	
+oninput, onblur-->
+          <input type="url" id="urlInput" placeholder="https://ejemplo.com"
+          oninput="url(this)"
+            onblur="url(this)"
+           />
+                   <div class="response-area">
+              <div class="response-title"></div>
+              <div class="response-content" id="respuestaURL"></div>
+            </div>
+          
         </div>
       </div>
 
@@ -203,9 +259,7 @@
         </div>
         <div class="response-area">
           <div class="response-title"></div>
-          <div class="response-content" id="checkboxResponse">
-           
-          </div>
+          <div class="response-content" id="checkboxResponse"></div>
         </div>
       </div>
 
@@ -233,9 +287,7 @@
         </div>
         <div class="response-area">
           <div class="response-title"></div>
-          <div class="response-content" id="selectResponse">
-           
-          </div>
+          <div class="response-content" id="selectResponse"></div>
         </div>
       </div>
 
@@ -251,9 +303,7 @@
         </div>
         <div class="response-area">
           <div class="response-title"></div>
-          <div class="response-content" id="buttonResponse">
-           
-          </div>
+          <div class="response-content" id="buttonResponse"></div>
         </div>
       </div>
 
@@ -277,9 +327,7 @@
         </form>
         <div class="response-area">
           <div class="response-title"></div>
-          <div class="response-content" id="formResponse">
-            
-          </div>
+          <div class="response-content" id="formResponse"></div>
         </div>
       </div>
     </div>
