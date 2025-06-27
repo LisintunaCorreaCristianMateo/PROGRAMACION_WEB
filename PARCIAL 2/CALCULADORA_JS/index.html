@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Basica con JS</title>
+    <link rel="stylesheet" href="./public/bootstrap-5.3.5-dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./public/css/calculadora.css">
+</head>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4 ">
+        CALCULADORA BASICA
+    </h1>
+    <div class="card p-5 mx-auto fondo">
+        <input type="numer" class="form-control my-3" value="0" id="text_pantalla" disabled>
+
+
+    <div class="row g-2">
+        <div class="col-3">
+            <button class="btn btn-secondary "  data-numero="nueve"  onclick="agregarNumero('9')">9</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('8')">8</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('7')">7</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-warning" onclick="seleccionarOperacion('+')">+</button>
+
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('6')">6</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('5')">5</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('4')">4</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-warning" onclick="seleccionarOperacion('-')">-</button>
+
+
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('3')">3</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('2')">2</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('1')">1</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-warning" onclick="seleccionarOperacion('*')">*</button>
+
+
+        </div>
+
+                <div class="col-3">
+            <button class="btn btn-warning " onclick="eliminar()">C</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-secondary " onclick="agregarNumero('0')">0</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-warning " onclick="calcular()">=</button>
+
+        </div>
+        <div class="col-3">
+            <button class="btn btn-warning" onclick="seleccionarOperacion('/')">/</button>
+
+
+        </div>
+    </div>
+
+    </div>
+
+
+    <body>
+        <script src="./public/bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+        <script src="./public/js/calculadora.js"></script>
+    </body>
+</div>
+
+</html>

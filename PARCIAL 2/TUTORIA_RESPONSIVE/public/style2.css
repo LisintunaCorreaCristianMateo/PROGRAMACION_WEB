@@ -1,0 +1,112 @@
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* tamaño de fuente */
+    font-size: 2rem; 
+    /*groso de fuente */
+    font-weight: 600;
+    /*altura de linea*/
+    line-height: 2rem;
+    /*Espaciado entre letras */
+    letter-spacing: 0.05rem;
+    /*alineacion del text*/
+    text-align: center;
+    /*decoracion del text */
+    text-decoration: underline;
+    /*transformacion (mayusculas, minusculas) */
+    text-transform: uppercase;
+    /*trasformacion minusculas */
+    text-transform: lowercase;
+    /*sombra en el texto*/
+    text-shadow: 2px 2px 4px #000000;
+    /*manejo de espacios en blanco */
+    white-space: nowrap;
+    /*alineacion vertical */
+    vertical-align: middle;
+    /*visivilidad invisible*/
+    visibility: visible;
+    /*trasparencia*/
+    opacity: 0.4;
+  
+}
+table{
+   
+    /*alineacion vertical de la tabla */
+    vertical-align: middle;
+    /*margen de la tabla */
+    margin: 0 auto;
+    /*ancho de la tabla */
+    width: 40%;
+    /*bordes de la tabla */
+    border-collapse: collapse;
+    border:2px solid #000;
+}
+th,td{
+    border:2px solid #000;
+}
+.desbordado{
+  
+    /*desbordado horizontal */
+    overflow-y: scroll;
+}
+div{
+   position : relative;
+   right:2px;
+    padding:2rem;
+    width:20%;
+    height: 20px;
+
+}
+.contenedor1{
+    
+    display:flex;
+
+   background-color: aquamarine;
+}
+.contenedor2{
+    display:flex;
+    background-color: lightblue;
+}
+.contenedor3{
+    position:static;
+    background-color: lightcoral;
+}
+.contenedor4{
+    position:absolute;
+    bottom:150px;
+    left: 50px;
+    background-color: rgb(121, 157, 121);
+    /*ajustes de elementos flexibles */
+    flex-wrap: wrap;
+    display: grid;
+    /*columnas en css grid */
+    grid-template-columns: 1fr 1fr 1fr;
+    /*separacion entre celdas */
+    grid-gap: 1px;
+    /* alineacion de los elementos */
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    display :flex;
+    flex-direction:row;
+}
+button{
+    border:4px solid #000;
+    /*estilo de borde */
+    border-style: solid;
+    /*sombre de caja */
+    box-shadow: 2px 2px 4px #000000;
+    /*tipo de cursor */
+    cursor:grab;
+    /*interaccin con punter */
+    pointer-events: auto;
+
+}
+.imagen{
+/*Imagen de fondo */
+    background-image: url('https://www.w3schools.com/w3css/img_lights.jpg');
+
+    /*efectos graficos */
+    filter: brightness(50%);
+}

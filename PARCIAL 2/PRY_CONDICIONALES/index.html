@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condicionales</title>
+    <link
+      rel="stylesheet"
+      href="./lib/bootstrap-5.3.5-dist/css/bootstrap.min.css"
+    />
+    <style>
+        body{
+            background-color: #4c360e;
+            color:#f8f9fa
+        }
+        .formato {
+            text-align: center;
+            color: #a96e2f;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        input {
+            background-color: #f8f9fa;
+            color: #000;
+            width: 50%;
+          
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container my-5- py-5">
+      <h1 class="formato">INFORMACIÓN</h1>
+      <br />
+      <label for="edad">Ingrese su edad</label>
+      <input
+        type="number"
+        id="edad"
+        class="form-control mb-3"
+        placeholder="Edad"
+        required
+        onkeypress="calcularEdad(this)"
+        onkeyup=""
+      />
+      <p id="mensaje"></p>
+      <label for="genero">Ingresa el genero</label>
+      <input
+        type="text"
+        id="genero"
+        class="form-control mb-3"
+        placeholder="Genero"
+        required
+        onkeypress="calcularGenero(this)"
+      />
+      <p id="mostrarGenero"></p>
+      <label for="hora">Seleccione la hora</label>
+      <input type="time" 
+      id="hora" 
+      class="form-control mb-3"
+      required
+    onkeypress="calcularSaludo(this)"
+ />
+        <p id="mostrarSaludo"></p>
+    </div>
+
+    <script src="./lib/bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="./js/Calcular.js"></script>
+  </body>
+</html>

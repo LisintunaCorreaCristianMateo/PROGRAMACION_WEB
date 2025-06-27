@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:50%;
+            background-color: red;
+            padding:2rem;
+            display:flex;
+            /*alineacion horizontal*/
+            justify-content: center;
+            /*alineacion transversal*/
+            align-items: center;
+            /*se encoje un item flexible*/
+            flex-shrink:1;
+            
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+
+        }
+        p{
+            user-select: none;
+            /*seleccion de texto*/
+            user-select: text;
+        }
+    </style>
+</head>
+<body>
+    <div>Hola</div>
+    <br>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td class="desbordado">Juan</td>
+            <td>30</td>
+    </table>
+    <p>Este testo es de prueba</p>
+</body>
+</html>
