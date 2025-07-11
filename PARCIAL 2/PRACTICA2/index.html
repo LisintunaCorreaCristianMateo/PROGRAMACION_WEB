@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <h1>REGISTRO DE ESTUDIANTES</h1>
+    <div class="container1">
+        
+        <label for="nombre">Ingresa el nombre</label>
+        <input type="text" id="nombre">
+        <br> <br>
+        <label for="apellido">Ingresa el apellido</label>
+        <input type="text" id="apellido">
+        <br><br>
+        <label for="edad">Ingresa la edad</label>
+        <input type="number" id="edad">
+        <br><br>
+        <label for="carrera">Ingresa la carrera</label>
+        <input type="text" id="carrera">
+        <br><br>
+        <label for="nota">Ingresa la nota</label>
+        <input type="number" id="nota">
+
+        <br>
+        <br>
+        <button onclick="registrarEstudiante()">Registrar </button>
+     
+
+
+    </div>
+
+    <div class="container1 horizontal">
+        <h2>Lista de estudiantes</h2>
+        <br>
+        <p id="lista"> </p>
+
+        <p id="promedio"></p>
+    </div>
+
+    <script src="./js/estudiantes.js"></script>
+
+</body>
+</html>

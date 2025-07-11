@@ -21,12 +21,7 @@
               type="text"
               id="textInput"
               oninput="text(this)"
-              onchange="text(this)"
-              onfocus="text(this)"
-              onblur="text(this)"
-              onkeyup="text(this)"
-              onkeydown="text(this)"
-              onkeypress="text(this)"
+            
             />
 
             <div class="response-area">
@@ -41,8 +36,7 @@
             <input
               type="email"
               id="emailInput"
-              oninput="correo(this)"
-              onchange="correo(this)"
+            
               onblur="correo(this)"
             />
             <div class="response-area">
@@ -62,8 +56,7 @@
             <input
               type="number"
               id="numberInput"
-              oninput="number(this)"
-              onchange="number(this)"
+              
               onkeyup="number(this)"
             />
             <div class="response-area">
@@ -79,8 +72,7 @@
               type="password"
               id="passwordInput"
               placeholder="Tu contraseña"
-              onkeypress="password(this)"
-              onkeyup="password(this)"
+        
               onblur="password(this)"
             />
             <div class="response-area">
@@ -101,8 +93,7 @@
               type="date"
               id="dateInput"
               onchange="date(this)"
-              onblur="date(this)"
-              onfocus="date(this)"
+         
             />
             <div class="response-area">
               <div class="response-title"></div>
@@ -116,7 +107,7 @@
               type="time"
               id="timeInput"
               onchange="time(this)"
-              onblur="time(this)"
+             
             />
 
             <div class="response-area">
@@ -138,8 +129,7 @@
               id="fileInput"
               accept="image/*,.pdf,.doc,.docx"
               onchange="file(this)"
-              onclick="file(this)"
-              onblur="file(this)"
+            
             />
             <div class="response-area">
               <div class="response-title"></div>
@@ -155,8 +145,8 @@
               min="0"
               max="100"
               value="50"
-              oninput="range(this)"
-              onchange="range(this)"
+              
+              onfocus="range(this)"
             />
             <div class="response-area">
               <div class="response-title"></div>
@@ -209,9 +199,10 @@
           <label for="urlInput">Input URL:</label>
           <!--usar:	
 oninput, onblur-->
+        </div>
           <input type="url" id="urlInput" placeholder="https://ejemplo.com"
-          oninput="url(this)"
-            onblur="url(this)"
+       
+            onkeyup="url(this)"
            />
                    <div class="response-area">
               <div class="response-title"></div>
@@ -221,116 +212,7 @@ oninput, onblur-->
         </div>
       </div>
 
-      <!-- Sección: Checkboxes y Radios -->
-      <div class="form-section">
-        <div class="form-group">
-          <label>Checkboxes (selección múltiple):</label>
-          <div class="checkbox-group">
-            <div class="checkbox-item">
-              <input type="checkbox" id="check1" value="opcion1" />
-              <label for="check1">Opción 1</label>
-            </div>
-            <div class="checkbox-item">
-              <input type="checkbox" id="check2" value="opcion2" />
-              <label for="check2">Opción 2</label>
-            </div>
-            <div class="checkbox-item">
-              <input type="checkbox" id="check3" value="opcion3" />
-              <label for="check3">Opción 3</label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Radio Buttons (selección única):</label>
-          <div class="radio-group">
-            <div class="radio-item">
-              <input type="radio" id="radio1" name="radioGroup" value="A" />
-              <label for="radio1">Opción A</label>
-            </div>
-            <div class="radio-item">
-              <input type="radio" id="radio2" name="radioGroup" value="B" />
-              <label for="radio2">Opción B</label>
-            </div>
-            <div class="radio-item">
-              <input type="radio" id="radio3" name="radioGroup" value="C" />
-              <label for="radio3">Opción C</label>
-            </div>
-          </div>
-        </div>
-        <div class="response-area">
-          <div class="response-title"></div>
-          <div class="response-content" id="checkboxResponse"></div>
-        </div>
-      </div>
 
-      <!-- Sección: Select y Textarea -->
-      <div class="form-section">
-        <div class="two-column">
-          <div class="form-group">
-            <label for="selectInput">Select (Lista desplegable):</label>
-            <select id="selectInput">
-              <option value="">Selecciona una opción</option>
-              <option value="madrid">Madrid</option>
-              <option value="barcelona">Barcelona</option>
-              <option value="valencia">Valencia</option>
-              <option value="sevilla">Sevilla</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="textareaInput">Textarea:</label>
-            <textarea
-              id="textareaInput"
-              rows="4"
-              placeholder="Escribe un texto largo aquí..."
-            ></textarea>
-          </div>
-        </div>
-        <div class="response-area">
-          <div class="response-title"></div>
-          <div class="response-content" id="selectResponse"></div>
-        </div>
-      </div>
-
-      <!-- Sección: Botones -->
-      <div class="form-section">
-        <div class="two-column">
-          <div class="form-group">
-            <button type="button" id="normalButton">Botón Normal</button>
-          </div>
-          <div class="form-group">
-            <button type="submit" id="submitButton">Botón Submit</button>
-          </div>
-        </div>
-        <div class="response-area">
-          <div class="response-title"></div>
-          <div class="response-content" id="buttonResponse"></div>
-        </div>
-      </div>
-
-      <!-- Sección: Formulario Completo -->
-      <div class="form-section">
-        <form id="completeForm">
-          <div class="form-group">
-            <label for="formName">Nombre:</label>
-            <input type="text" id="formName" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="formEmail">Email:</label>
-            <input type="email" id="formEmail" name="email" required />
-          </div>
-          <div class="form-group">
-            <button type="submit">Enviar Formulario</button>
-          </div>
-          <div class="form-group">
-            <button type="reset">Resetear Formulario</button>
-          </div>
-        </form>
-        <div class="response-area">
-          <div class="response-title"></div>
-          <div class="response-content" id="formResponse"></div>
-        </div>
-      </div>
-    </div>
 
     <script src="./js/script.js"></script>
   </body>

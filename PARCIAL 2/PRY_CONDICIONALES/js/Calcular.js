@@ -45,3 +45,6 @@ function calcularSaludo(valor) {
     }
     document.getElementById('mostrarSaludo').innerHTML = mjs;
 }
+
+//conficionales y evantos 
+argumento.value

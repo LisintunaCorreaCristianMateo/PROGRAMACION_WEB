@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salas de cine</title>
+    <style>
+        .reservas {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin-left:50px ;
+            padding: 20px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 8px;
+            font-size: 16px;
+        }
+        h1{
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Salas de cine</h1>
+<label for="">Nombre de usuario</label>
+<input type="nombre" id="nombre" >
+<br>
+<label for="">edad</label>
+<input type="number" id="edad">
+<br>
+
+<br>
+<select name="" id="salas">
+    <!-- l a opcion 0 no se debe poder selecionar-->
+
+  
+    <!-- la opcion de value 0 se de deve poder seleccionar-->
+    <option value="0" disabled selected>Seleccione una sala</option>
+    <option value="1">Sala 1</option>
+    <option value="2">Sala 2</option>
+    <option value="3">Sala 3</option>
+    <option value="4">Sala 4</option>
+    <option value="5">Sala 5</option>
+</select>
+
+    <!--button para reservar-->
+<button id="reservar" onclick="reservar()">Reservar</button>
+<!--mostrar resumen de salas -->
+<br><br>
+<div class="reservas">
+    <h2>Detalles de salas</h2>
+    <div id="detallesSalas">
+        <!-- Aquí se mostrarán los detalles de las salas reservadas -->
+         </div>
+
+</div>
+
+
+<script src="./js/reservar.js"></script>
+<script>
+    mostrar();
+</script>
+</body>
+</html>

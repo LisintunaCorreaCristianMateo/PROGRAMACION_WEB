@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CICLO FOR</title>
+    <link
+      rel="stylesheet"
+      href="./public/bootstrap-5.3.5-dist/css/bootstrap.min.css"
+    />
+    
+ <!--Plugin CSS file with desired skin-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    
+  </head>
+  <body>
+    <div class="container py-5">
+      <h1>Ciclo for</h1>
+
+      <label for="numero">Ingrese un numero</label>
+      <input type="number" class="form-control" id="numero" onkeyup="multiplicar()" />
+
+      <label for="txt_numero_inicio">Inicie numero inicio</label>
+      <input 
+      type="number" 
+      class="form-control" 
+      id="txt_numero_inicio" 
+      
+        onkeyup="pasarNumero(this)"
+      />
+
+      <label for="txt_numero_final">Inicie numero final</label>
+      <input type="number" class="form-control" 
+      id="txt_numero_final"
+      onkeyup="pasarNumero(this)"
+       />
+
+
+
+          
+    <input type="text" class="js-range-slider" name="my_range" value=""
+        data-type="double"
+        data-min="0"
+        data-max="100"
+        data-from="200"
+        data-to="500"
+        data-grid="true"
+    />
+    
+
+            <label for="mostrar" class="form-label">Respuesta</label>
+        <textarea id="mostrar" class="form-control" rows="10" readonly></textarea>
+    
+        
+        
+    </div>
+
+
+
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    
+
+    <script src="./public/bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="./js/for.js"></script>
+  </body>
+</html>
